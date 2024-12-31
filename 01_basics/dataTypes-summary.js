@@ -43,3 +43,26 @@ console.log(typeof BigInt);
 // Arrays => object
 // Function => function
 // object => object
+
+// ++++++++++++++++++ MEMORY +++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive) , Heap (Non-Primitive)
+
+let myYoutubeName = "shellipaldotcom";
+
+let anotherName = myYoutubeName;
+anotherName = "shelli";
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+  email: "user@google.com",
+  upi: "user@ybl",
+};
+
+let userTwo = userOne;
+userTwo.email = "shelli@google.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
