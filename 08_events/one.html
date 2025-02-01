@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+
+    <h2>Amazing images</h2>
+
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px" id="Radha-Krishna"
+                    src="https://i.pinimg.com/236x/9b/05/f4/9b05f471d49f139f64ce115d3f7241f4.jpg" alt="Radha-Krishna">
+            </li>
+
+            <li>
+                <img width="200px" id="mini-Radha"
+                    src="https://i.pinimg.com/236x/3d/f1/07/3df1072e0e410806be1912c38f8413cd.jpg" alt="mini-Radha">
+            </li>
+
+            <li>
+                <img width="200px" id="Sansar"
+                    src="https://i.pinimg.com/236x/f1/33/39/f13339dece5dd1ee455ddaf808ca4c04.jpg" alt="Sansar">
+            </li>
+
+            <li>
+                <img width="200px" id="shelli"
+                    src="https://i.pinimg.com/474x/b2/84/4c/b2844c04f84ce2a9bb5ac26397b7085a.jpg" alt="shelli">
+            </li>
+            <li>
+                <a style="color: aliceblue;" href="https://google.com" id="google">Google</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+<script>
+
+    // attachEvent()...............also used in early time.........
+    // jQuery - on
+
+    // Type , timestamp , defaultPrevented ,
+    // target , toElement , scrElement , currentTarget , 
+    // clientX , clientY , screenX , screenY ,
+    // altKey , ctrlKey , shiftKey , keyCode.
+
+
+    // document.getElementById('Radha-Krishna').onclick = function () {
+    //     alert("Radha-Krishna clicked");
+    // }
+
+    // document.getElementById('images').addEventListener('click', function (e) {
+    //     // alert("Radha-Krishna clicked");
+    //     console.log("clicked inside the ul");
+
+    // }, false)
+    // document.getElementById('mini-Radha').addEventListener('click', function (e) {
+    //     // alert("Radha-Krishna clicked");
+    //     console.log("mini-Radha clicked");
+    //     e.stopPropagation()
+    // }, false)
+
+
+    // document.getElementById('google').addEventListener('click', function (e) {
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+
+    // }, false)
+
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+
+        // removeIt.parentNode.removeChild(removeIt)
+
+    }, false)
+
+</script>
+
+</html>
