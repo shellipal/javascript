@@ -1,3 +1,5 @@
+// promise 1.......................
+
 const PromiseOne = new Promise(function (resolve, reject) {
   // Do an asyns task...........
   // DB calls , cryptography , network
@@ -10,6 +12,8 @@ const PromiseOne = new Promise(function (resolve, reject) {
 PromiseOne.then(function () {
   console.log("Promise consumed");
 });
+
+// promise 2...........................
 
 new Promise(function (resolve, reject) {
   setTimeout(function () {
@@ -26,6 +30,8 @@ const promiseThree = new Promise(function (resolve, reject) {
   }, 1000);
 });
 
+// promise 3............................
+
 promiseThree.then(function (user) {
   console.log(user);
 });
@@ -40,6 +46,8 @@ const promiseFour = new Promise(function (resolve, reject) {
     }
   }, 1000);
 });
+
+// promise 4.....................................
 
 promiseFour
   .then((user) => {
