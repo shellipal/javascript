@@ -22,5 +22,3 @@ Object.defineProperty(this, "password", {
 
 const chai = new User("chai@gmail.com", "1234");
 console.log(chai.email);
-const tea = new User("chai@gmail.com", "1234");
-console.log(tea.password);
