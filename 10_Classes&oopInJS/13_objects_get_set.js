@@ -1,3 +1,5 @@
+// get & sets.................................
+
 const User = {
   _email: "s@pal.com",
   _password: "abc",
